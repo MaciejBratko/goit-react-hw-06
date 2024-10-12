@@ -10,8 +10,27 @@ const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector((state) => state.contacts.items);
 
-  const handleNameChange = useCallback((e) => setName(e.target.value), []);
-  const handleNumberChange = useCallback((e) => setNumber(e.target.value), []);
+  const validateName = (input) => {
+    return /^[a-zA-Z\s]*$/.test(input);
+  };
+
+  const validateNumber = (input) => {
+    return /^[0-9\s+-]*$/.test(input);
+  };
+
+  const handleNameChange = useCallback((e) => {
+    const newName = e.target.value;
+    if (validateName(newName)) {
+      setName(newName);
+    }
+  }, []);
+
+  const handleNumberChange = useCallback((e) => {
+    const newNumber = e.target.value;
+    if (validateNumber(newNumber)) {
+      setNumber(newNumber);
+    }
+  }, []);
 
   const isContactExist = useMemo(() => {
     return contacts.some(

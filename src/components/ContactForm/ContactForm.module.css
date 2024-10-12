@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 25vw;
+  border: black solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.form label {
+  align-self: first baseline;
+}
+
+.form div {
+  width: 100%;
+}
+
+.field {
+  width: 100%;
+  min-height: 25px;
+  /* margin-bottom: 10px; */
+}
+
+.addContact {
+  padding: 5px;
+}

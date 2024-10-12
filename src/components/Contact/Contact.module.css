@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 16vw;
+  border: black solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.container div p {
+  margin: 0;
+  padding: 0;
+}
+
+.deleteButton {
+  padding: 0;
+  margin: 0;
+  height: 20px;
+  width: 50px;
+}
